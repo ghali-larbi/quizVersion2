@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz2.FXMLDocumentController">
+    <children>
+        <Label fx:id="label2" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Pane fx:id="p" layoutX="21.0" layoutY="451.0" prefHeight="362.0" prefWidth="625.0">
+         <children>
+            <Label fx:id="lb1" layoutX="14.0" layoutY="14.0" text="JAVA est un langage :" />
+            <RadioButton fx:id="r1" layoutX="28.0" layoutY="47.0" mnemonicParsing="false" text="Compilé">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="233.0" layoutY="47.0" mnemonicParsing="false" text="Interprété" toggleGroup="$group1" />
+            <RadioButton fx:id="r3" layoutX="449.0" layoutY="47.0" mnemonicParsing="false" text="Compilé et interpreté" toggleGroup="$group1" />
+            <Label layoutX="14.0" layoutY="81.0" text="Toutes les classes héritent de la classe :" />
+            <RadioButton fx:id="r1_2" layoutX="28.0" layoutY="112.0" mnemonicParsing="false" text="Main">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="r2_2" layoutX="233.0" layoutY="112.0" mnemonicParsing="false" text="object" toggleGroup="$group2" />
+            <RadioButton fx:id="r3_2" layoutX="449.0" layoutY="112.0" mnemonicParsing="false" text="AWT" toggleGroup="$group2" />
+            <Label layoutX="14.0" layoutY="144.0" text="Est-ce que on peut avoir plusieurs constructeurs pour la même classe  :" />
+            <RadioButton fx:id="r1_3" layoutX="28.0" layoutY="171.0" mnemonicParsing="false" text="oui">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="r2_3" layoutX="226.0" layoutY="171.0" mnemonicParsing="false" text="non" toggleGroup="$group3" />
+            <Label layoutX="14.0" layoutY="200.0" text="Par convention une classe   :" />
+            <RadioButton fx:id="r1_4" layoutX="22.0" layoutY="228.0" mnemonicParsing="false" text="est en minuscule">
+               <toggleGroup>
+                  <ToggleGroup fx:id="r4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="r2_4" layoutX="224.0" layoutY="228.0" mnemonicParsing="false" text="commence par une majuscule" toggleGroup="$r4" />
+            <RadioButton fx:id="r3_4" layoutX="449.0" layoutY="228.0" mnemonicParsing="false" text="est en majuscules" toggleGroup="$r4" />
+            <Label layoutX="14.0" layoutY="258.0" text="Dans la ligne public class A implements est  :" />
+            <RadioButton fx:id="r1_5" layoutX="22.0" layoutY="286.0" mnemonicParsing="false" text="Interface" />
+            <RadioButton fx:id="r2_5" layoutX="226.0" layoutY="286.0" mnemonicParsing="false" text="Classe parent" />
+            <RadioButton fx:id="r3_5" layoutX="452.0" layoutY="286.0" mnemonicParsing="false" text="Package">
+               <toggleGroup>
+                  <ToggleGroup fx:id="r5" />
+               </toggleGroup>
+            </RadioButton>
+            <Button fx:id="btn1" layoutX="272.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleButtonAction" text="suivant" />
+         </children>
+      </Pane>
+      <Pane fx:id="p2" layoutX="7.0" layoutY="796.0" prefHeight="386.0" prefWidth="654.0">
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="639.0" text="Après la compilation, un programme écrit en JAVA, il se transforme en programme en bytecode Quelle est l’extension du programme en bytecode ? :" />
+            <RadioButton fx:id="rn1" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" text="aucun des choix" />
+            <RadioButton fx:id="rn2" layoutX="263.0" layoutY="54.0" mnemonicParsing="false" text=".JAVA" />
+            <RadioButton fx:id="rn3" layoutX="511.0" layoutY="54.0" mnemonicParsing="false" text=".class">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group4" />
+               </toggleGroup>
+            </RadioButton>
+            <Label layoutX="14.0" layoutY="88.0" prefHeight="17.0" prefWidth="639.0" text="Class Test{Public Test () {System.out.println(”Bonjour”);}public Test (int i){this()System.out.println(”Nous sommes en ”+i+ ” !”);};}qu’affichera l’instruction suivante?Test t1=new Test (2018);" />
+            <RadioButton fx:id="rn1_2" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" text="aucun des choix" />
+            <RadioButton fx:id="rn2_2" layoutX="226.0" layoutY="117.0" mnemonicParsing="false" text="Bonjour Nous sommes en 2018 !">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group5" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_2" layoutX="495.0" layoutY="117.0" mnemonicParsing="false" text="Nous sommes en 2018 !" toggleGroup="$group5" />
+            <Label layoutX="14.0" layoutY="148.0" prefHeight="17.0" prefWidth="606.0" text="Voici un constructeur de la classe Employee, y-at'il un problème?Public void Employe(String n){Nom=n;}" />
+            <RadioButton fx:id="rn1_3" layoutX="14.0" layoutY="176.0" mnemonicParsing="false" text="vrai">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group6" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn2_3" layoutX="226.0" layoutY="176.0" mnemonicParsing="false" text="faux" toggleGroup="$group6" />
+            <Label layoutX="14.0" layoutY="205.0" prefHeight="17.0" prefWidth="639.0" text="Pour spécifier que la variable ne pourra plus êtremodifiée et doit être initialisée dès sa déclarationon la déclare comme une constante avec le mot réservé" />
+            <RadioButton fx:id="rn1_4" layoutX="10.0" layoutY="230.0" mnemonicParsing="false" text="aucun des choix">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group7" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn2_4" layoutX="220.0" layoutY="230.0" mnemonicParsing="false" text="final" toggleGroup="$group7" />
+            <RadioButton fx:id="rn3_4" layoutX="468.0" layoutY="230.0" mnemonicParsing="false" text="const" toggleGroup="$group7" />
+            <Label layoutX="10.0" layoutY="258.0" prefHeight="17.0" prefWidth="631.0" text="Dans une classe, on accède à ses variables grâce au mot clé" />
+            <RadioButton fx:id="rn1_5" layoutX="14.0" layoutY="285.0" mnemonicParsing="false" text="aucun des choix">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group8" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn2_5" layoutX="226.0" layoutY="285.0" mnemonicParsing="false" text="this" toggleGroup="$group8" />
+            <RadioButton fx:id="rn3_5" layoutX="474.0" layoutY="285.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="65.0" text="super" toggleGroup="$group8" />
+            <Button fx:id="btn2" layoutX="275.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleButtonAction2" text="suivant" />
+         </children></Pane>
+      <Pane fx:id="p3" layoutX="7.0" layoutY="1198.0" prefHeight="394.0" prefWidth="654.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="631.0" text="calculerSalaire(int) calculerSalaire(int, double)La méthode calculerSalaire est :" />
+            <RadioButton fx:id="rn3_1" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" text="aucun des choix">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group11" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_21" layoutX="230.0" layoutY="43.0" mnemonicParsing="false" text="surchargée" toggleGroup="$group11" />
+            <RadioButton fx:id="rn3_3" layoutX="481.0" layoutY="43.0" mnemonicParsing="false" text="redéfinie" toggleGroup="$group11" />
+            <Label layoutX="14.0" layoutY="73.0" prefHeight="17.0" prefWidth="615.0" text="Une classe qui contient au moins une méthode abstraite doit être déclarée abstraite. :" />
+            <RadioButton fx:id="rn3_11" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" text="vrai">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group12" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_22" layoutX="230.0" layoutY="105.0" mnemonicParsing="false" text="faux" toggleGroup="$group12" />
+            <Label layoutX="14.0" layoutY="135.0" prefHeight="17.0" prefWidth="562.0" text="Est-ce qu’une classe peut implémenter plusieurs interfaces ?" />
+            <RadioButton fx:id="rn3_111" layoutX="10.0" layoutY="164.0" mnemonicParsing="false" text="vrai">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group13" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_222" layoutX="226.0" layoutY="164.0" mnemonicParsing="false" text="faux" toggleGroup="$group13" />
+            <Label layoutX="16.0" layoutY="199.0" prefHeight="17.0" prefWidth="639.0" text="La déclaration d'une méthode suivante public void traitement() throws IOExceptionprécise que la méthode propage une exceptioncontrôlée)" />
+            <RadioButton fx:id="rn3_44" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" text="vrai">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group14" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_55" layoutX="208.0" layoutY="232.0" mnemonicParsing="false" text="faux" toggleGroup="$group14" />
+            <Label layoutX="16.0" layoutY="266.0" prefHeight="17.0" prefWidth="639.0" text="class Test{public static void main (String[] args) {try {int a =10;System.out.println (\&quot;a = \&quot; + a );int b = 0 / a;System.out.println (\&quot;b = \&quot; + b);}catch(ArithmeticException e){System.out.println (\&quot;diviser par 0!\&quot;); }\r\nfinally\r\n{System.out.println (\&quot;je suis à l’intérieur de\r\nfinally\&quot;);}}}" />
+            <RadioButton fx:id="rn3_7" layoutX="10.0" layoutY="295.0" mnemonicParsing="false" text="aucun des choix">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group15" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rn3_777" layoutX="352.0" layoutY="295.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="295.0" text="a=10b=0diviser par 0! &quot;je suis àl’intérieur de&quot;finally" toggleGroup="$group15" />
+            <RadioButton fx:id="rn3_77" layoutX="131.0" layoutY="295.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="218.0" text="a=10b=0diviser par 0!je suis àl’intérieur de" toggleGroup="$group15" />
+            <Button fx:id="btn3" layoutX="273.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleButtonAction3" text="suivant" />
+         </children>
+      </Pane>
+      <Label fx:id="time" layoutX="524.0" layoutY="14.0" text="time" />
+      <Pane fx:id="paneCommencer" layoutX="26.0" layoutY="57.0" prefHeight="394.0" prefWidth="615.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="196.0" layoutY="75.0" prefHeight="17.0" prefWidth="250.0" text="commencer quiz" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="SE_RESIZE" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Button fx:id="btnCommencer" layoutX="282.0" layoutY="185.0" mnemonicParsing="false" onAction="#commencer" prefHeight="35.0" prefWidth="98.0" text="Commencer">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
