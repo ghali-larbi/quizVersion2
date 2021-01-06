@@ -306,7 +306,7 @@ public class FXMLDocumentController implements Initializable {
         }
     }, 1000, 1000);
   try{
-     String song="C:\\Users\\DELL\\Documents\\NetBeansProjects\\JavaApplication2\\music\\kahoot-lobby-music.mp3";
+     String song="C:\\Users\\DELL\\Documents\\NetBeansProjects\\quiz2\\music\\kahoot-lobby-music.mp3";
      MP3Player mp3=new MP3Player(new File(song));
      mp3.play();
   }
